@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<title>javaWeb标签---表单标签</title>
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;font-size:12px;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+			h1{color:#ff3399;}
+			.b_left{width:660px;height:335px;float:left;font-size:16px;text-indent:2em;line-height:20px;}
+			.b_right{width:460px;heiht:335px;float:right;}
+			pre{font-size:14px;font-size:550;text-indent:2em;}
+			.padding_text{width:300px;height:130px;font-size:18px;text-indent:2em;margin-top:10px;float:left;}
+			.padding_img{width:717px;height:157px;float:right;}
+			.margin_padding_text{width:400px;height:195px;float:left;}
+			.margin_padding_img{width:714px;height:153px;float:right;}
+
+			.border{width:300px;height:100px;margin:0 auto;
+				/*边框宽度*/
+				border-width:2px;
+				/*边框的颜色值*/
+				border-color:#f00;
+				/*边框样式*/
+				border-style:solid;
+				
+				/*简写形式 border:宽度 样式 颜色; 企业级开发方式*/
+				border:1px solid red;
+
+			}
+			
+			ul li h2{line-height:60px;text-align:center;}
+			ul li{padding-top:40px;;padding-left:100px;;float:left;}
+			.dotted{width:300px;height:100px;border:10px dotted red;}
+			.dashed{width:300px;height:100px;border:10px dashed gray;}
+			.solid{width:300px;height:100px;border:10px solid #6c0;}
+			.double{width:300px;height:100px;border:10px double #6cf}
+			.groove{width:300px;height:100px;border:20px groove #f60;}
+			.ridge{width:300px;height:100px;border:20px ridge yellow;}
+			.inset{width:300px;height:100px;border:20px inset #63f;}
+			.outset{width:300px;height:100px;border:20px outset #c30;}
+
+			.big{width:300px;height:100px;border:1px solid red;}
+			.big .text{padding-top:20px;color:red;font-size:20px;padding-left:10px;}
+			.big .small{width:150px;height:20px;background:#ff66cc;margin-top:40px;}
+		</style>
+	</head>
+	<body>
+		<div class="text">第十二节---div盒子模型</div>
+		<br />
+
+		<h1 style="text-indent:2em;">CSS框概述</h1>
+		<br />
+		<div class="b_left">
+			CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框 和 外边距 的方式元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景,内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素.
+			<br />
+			<pre>
+	1.内边距、边框和外边距都是可选的，默认值是零；
+	2.margin 和 padding 设置为零来覆盖所有浏览器样式，解决浏览器兼容性 ;
+	* { margin: 0; padding: 0; }
+	3.	在 CSS 中，width 和 height 指的是内容区域的宽度和高度 ;
+	4.	增加内边距、边框和外边距不会影响内容区域的尺寸，
+	但是会增加元素框的总尺寸 ;
+	.box {
+	  width: 70px;
+	  margin: 10px;
+	  padding: 5px 5px;
+	}
+	5.	padding : 内边距，也有称为填充
+	6.	border : 边框 ; 
+	7.	margin : 外边距，也有称为空白或空白边 ;
+		</pre>	
+		</div>
+		<div class="b_right">
+			<img src="images/div1.png" alt="div盒子模型" width="460" height="335" />
+		</div>
+		<br />
+		<hr style="margin-top:336px;"/>
+
+		<h2 style="color:#0099cc;margin-top:2px;text-indent:2em;" >CSS 内边距  padding</h2>
+		<div class="padding_text">
+			CSS padding 属性CCSS padding 属性定义元素的内边距（边框和内容区之间）;padding 属性接受长度值或百分比值，但不允许使用负值。单边内边距属性（分别设置上、右、下、左内边距）&lt;例：h,p,div标签&gt;
+		</div>
+		<div class="padding_img">
+			<img src="images/div2.png" alt="paddig" width="717" height="157" />
+		</div>
+		<hr style="margin-top:190px;"/>
+
+		<h2 style="margin-top:10px;color:#66ffff;text-indent:2em;font-size:20px;">css边框概括</h2>
+		<div class="margin_padding_text">
+		<pre>
+			三方面： 宽度、样式，以及颜色
+
+		border
+		border-style
+		border-width
+		border-color
+		border-bottom
+		border-left
+		border-right
+		border-top
+
+		border: 1px solid red;
+		</pre>
+		</div>
+		<div class="margin_padding_img">
+			<img src="images/div3.png" width="524" height="278" />
+		</div>
+		<hr style="margin-top:326px;"/>
+
+		<h2 style="text-indent:2em;font-size:20px;color:darkblue;text-align:center;">
+			css样式 - css边框
+		</h2>
+		<div class="border"></div>
+
+		<ul>
+			<li>
+				<h2>点状边框 dotted</h2>
+				<div class="dotted"></div>
+			</li>
+			<li>
+				<h2>定义虚线 dashed</h2>
+				<div class="dashed"></div>
+			</li>
+			<li>
+				<h2>实线 dashed</h2>
+				<div class="solid"></div>
+			</li>
+
+			<li>
+				<h2>双线 double</h2>
+
+				<div class="double"></div>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<h2>3D凹槽 groove</h2>
+				<div class="groove"></div>
+			</li>
+
+			<li>
+				<h2>3D隆状 ridge</h2>
+				<div class="ridge"></div>
+			</li>
+
+			<li>
+				<h2>3D inset</h2>
+				<div class="inset"></div>
+			</li>
+			<li>
+				<h2>3D outset</h2>
+				<div class="outset"></div>
+			</li>
+		</ul>
+		<hr style="margin-top:1000px;"/>
+		
+		
+		<h2 style="text-indent:2em;font-size:20px;color:darkblue;text-align:center;margin-top:40px;">
+			CSS margin 属性
+		</h2>
+		<pre>
+			1.CSS margin 围绕在元素边框的空白区域是外边距。设置外边距会在元素外创建额外的“空白”;
+			2.margin 属性接受任何长度单位、百分数值甚至负值。
+			<img src="images/div4.png" alt="margin" width="714" height="153" />
+		</pre>
+
+		<h2 style="color:red;font-size:20px;">外边距</h2>
+		<div class="big">
+			<p class="text">上边距</p>
+			<div class="small"></div>
+		</div>
+		
+
+
+
+	</body>
+
+</html>

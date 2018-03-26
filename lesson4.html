@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>javaWeb开发 HTML模板初识</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+		</style>
+	</head>
+	<body>
+		<div class="text">第四节---图片标签</div>
+		<h1>html标签---图片标签</h1>
+		<p>图片标签四要素 src alt width height</p>
+
+		<h2>jpg图片格式:</h2>
+		<img src="images1/2.jpg" alt="美女" width="200" height="300"/>
+
+		<h2>gif图片格式:</h2>
+		<img src="images1/2.gif" alt="小萝莉" width="243" height="199"/>
+
+		<h2>png图片格式:</h2>
+		<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png" alt="百度" width="270" height="129"/>
+		
+		<h2>相对路径</h2>
+		<img src="images1/1.jpg" alt="美女" width="288" height="432"/>
+
+		<h2>排列图片(align="bottom/middle/top")</h2>
+
+		<h3>图像的排列顺序：align="bottom"</h3>
+		<img src="images1/arry.jpg" alt="arry授业老师" width="328" height="489" align="bottom"/>
+
+		<h3>图像的排列顺序：align="middle"</h3>
+		<img src="images1/a.jpg" alt="arry授业老师" width="435" height="653" align="middle">
+
+		<h3>图像的排列顺序：align="top"</h3>
+		<img src="images1/i.jpg" alt="arry授业老师" width="635" height="424" align="top">
+		
+		<h3>图片的超级链接</h3>
+		<a href="http://tanzhouedu.com"><img src="images1/tz.jpg" alt="潭州大厦" width="697" height="464" /></a>
+
+		<h3>浮动图片(带有图像的一个段落，图像的 align 属性设置为 "left"图像将浮动到文本的左侧)</h3>
+		<img src="images1/h.jpg" alt="老师" width="400" height="600" align="left"/>
+		“陕西十大怪”（又称“关中十大怪”，英文Ten oddities in Guanzhong或Ten oddities in middle Shaanxi）是指陕西中部的关中地区（西安、咸阳、宝鸡、渭南、铜川等市）出现的十种奇特民俗习惯。值得一提的是，“陕西十大怪”这一提法是不完全合理的。实际上“陕西十大怪”中的风俗仅出现在关中一带，在陕西的大部分地区并非如此。陕西省地理纬度跨度极大，从北至南存在陕北（黄土高原为主）、关中（渭河平原为主）、陕南（以秦岭以南的汉水流域为主）三大自然差异巨大的区域。以关中一地的风俗概括整个陕西，存在以点概面的概念缺陷，亦多表述为“关中十大怪”以去除歧义。
+		
+		<br />
+		<h4>总结：图片为何要初始化宽度和高度：因为程序从上到下顺序执行，如果不预先设置宽度和高度，那么浏览器在加载图片的时候由于无法确定宽度和高度，就会启动浏览器内核去计算将要加载的原始图片的大小，这是非常耗时的；但是给定了宽度和高度之后，浏览器就按照给定的来加载，不需要去计算，这就节省了时间，给用户带来了更好的体验，所以要加入宽度和高度</h4>
+		
+
+		<h2>图片路径 - 相对路径relative</h2>
+
+		<p>
+			HTML相对路径(Relative Path)<br /><br />
+
+			同一个目录的文件引用：如果源文件和引用文件在同一个目录里，直接写引用文件名即可，
+
+			这时引用文件的方式就是使用相对路径。
+		</p>
+
+		<h2>图片标签 - 绝对路径absolute</h2>
+
+		<img src="D:\tanzhou\java\第四节\images\1.gif" alt="小屁孩" width="91" height="72" /> <br /><br />
+
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1467823864105&di=72201a4c10f0e278a154db07bcbadb8f&imgtype=jpg&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F37d3d539b6003af32b99a061372ac65c1038b68b.jpg" alt="美女" width="244" height="366" />
+
+	</body>
+</html>

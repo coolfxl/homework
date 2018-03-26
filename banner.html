@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>javaWeb开发QQ空间弹窗【腾旭内部技术】</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			img{border:0;}
+
+			.title{text-align:center;font-size:18px;font-weight:600px;color:#6600ff;margin-top:30px;}
+			/*100%是自适应浏览器的宽度，浏览器有多宽，则有多宽*/
+			/* focus start */
+			.focus{width:100%;height:300px;}
+			.focus .f_bg{height:300px;background:#4a4d9c;}
+			.focus .f_bg .f_con{width:1200px;height:300px;margin:0 auto;
+			}
+			.focus .f_bg .f_con .banner{width:760px;height:300px;
+				margin:0 auto;overflow:hidden;
+				position:relative;
+			}
+			.focus .f_bg .f_con .banner .b_pic li{list-style:none;}
+			.focus .f_bg .f_con .banner .b_btn{position:absolute;bottom:10px;left:300px;
+			}
+			/*ul 标签没有将其升级为块级元素，他的宽度和高度是不会撑起来的*/
+			.focus .f_bg .f_con .banner .b_btn ul{background:#000;display:inline-block;
+				padding:8px 28px;border-radius:20px;
+				/*兼容所有浏览器的透明度的解决方案*/
+				opacity:0.4;filter:alpha(opacity=40);
+			}
+			/*将li间的距离拉大用margin*/
+			.focus .f_bg .f_con .banner .b_btn ul li{list-style:none;float:left;border:1px solid #fff;
+				width:8px;height:8px;margin:0 3px;border-radius:10px;
+			}
+			.focus .f_bg .f_con .banner .b_btn .sel{background:#fff;}
+		
+			.focus .f_bg .f_con .banner .b_ear{
+				/* a标签是行内元素，添加width和height时必须将其升级为block元素，高度和宽度才会显示出来*/
+				width:47px;height:70px;display:block;position:absolute;background:url("images/icon.png") no-repeat;display:none;
+			}
+			.focus .f_bg .f_con .banner .pre{left:10px;top:110px;background-position:-73px 0;}
+			.focus .f_bg .f_con .banner .pre:hover{background-position:-172px 0;}
+			.focus .f_bg .f_con .banner  .next{right:10px;top:110px;background-position:-123px 0;}
+			.focus .f_bg .f_con .banner  .next:hover{background-position:0 -57px;}
+			.focus .f_bg .f_con .banner:hover .b_ear{display:block;}
+			/* end focus*/
+		</style>
+	</head>
+	<body>
+	<div class="title">banner图项目实战一</div>
+	<br />
+	<!-- focus start -->
+	<div class="focus">
+		<div class="f_bg">
+			<div class="f_con">
+				<div class="banner">
+					
+					<ul class="b_pic">
+						<li>
+							<a href="#">
+								<img src="images/54.jpg" alt="图片的描述信息" width="760" height="295"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/825.jpg" alt="图片的描述信息" width="760" height="295"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/826.jpg" alt="图片的描述信息" width="760" height="295"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/827.jpg" alt="图片的描述信息" width="760" height="295"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="images/828.jpg" alt="图片的描述信息" width="760" height="295"/>
+							</a>
+						</li>
+					</ul>
+					<!-- 下面这个div跟上面这个ul是同级关系所以
+						 下面的div不会显示，因为被上面的Ul覆盖了
+						 这时候就要用到绝对定位,绝对定位是跟上级标签
+						 进行对比，而不是跟同级，目前遇到的是这个情况，不知道以后遇到的有没有变化，并且是跟上级的位置变化的
+					-->
+					<!-- 图点切换，用button和ul li  -->
+					<div class="b_btn">
+						<ul>
+							<li class="sel" data-color="#4E4D9B"></li>
+							<li data-color="#6766CE"></li>
+							<li data-color="#A136D2"></li>
+							<li data-color="#563481"></li>
+							<li data-color="#009DE4"></li>
+						</ul>
+					</div>
+
+					<a href="#" class="b_ear pre"></a>
+					<a href="#" class="b_ear next"></a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var index = 0;
+			$(".b_btn").find("li").mouseover(function(){
+				//控制小按钮选中 另外，联动最好通过下标或者索引去联//动
+				$(this).addClass("sel").siblings().removeClass("sel");
+				//获取下表
+				var _index = $(this).index();
+
+				index = _index;
+				//获取当前选中的按钮下标，根据下标切换图片,并且淡入淡出
+				$(".b_pic").find("li").eq(_index).fadeIn("slow").siblings().hide();
+				//同步切换背景图片
+				//获取背景图片颜色
+				var background = $(this).data("color");
+				$(this).parents(".f_bg").css("background",background);
+			});
+
+			//点击下一个
+			$(".next").click(function(){
+				index++;
+				var length = $(".b_pic").find("li").length;
+				if(index >= length){
+					index = 0;
+				}
+
+				//切换背景颜色
+				var background = $(".b_btn").find("li").eq(index).data("color");
+				$(this).parents(".f_bg").css("background",background);
+
+				$(".b_pic").find("li").eq(index).fadeIn("slow").siblings().hide();
+				//联动小按钮
+				$(".b_btn").find("li").eq(index).addClass("sel").siblings().removeClass("sel");
+			});
+
+			//点击上一个
+			$(".pre").click(function(){
+				index--;
+				var length = $(".b_pic").find("li").length;
+				if(index < 0){
+					index = length - 1;
+				}
+
+				//切换背景颜色
+				var background = $(".b_btn").find("li").eq(index).data("color");
+				$(this).parents(".f_bg").css("background",background);
+
+				$(".b_pic").find("li").eq(index).fadeIn("slow").siblings().hide();
+				//联动小按钮
+				$(".b_btn").find("li").eq(index).addClass("sel").siblings().removeClass("sel");
+			});
+			//自动切换
+			setInterval(function(){
+				index++;
+				var length = $(".b_pic").find("li").length;
+				if(index >= length){
+					index = 0;
+				}
+
+				//切换背景颜色
+				var background = $(".b_btn").find("li").eq(index).data("color");
+				$(this).parents(".f_bg").css("background",background);
+
+				$(".b_pic").find("li").eq(index).fadeIn("slow").siblings().hide();
+				//联动小按钮
+				$(".b_btn").find("li").eq(index).addClass("sel").siblings().removeClass("sel");
+			},90000);
+
+		});
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>javaWeb开发 HTML模板初识</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+			ul{padding-left:40px;}
+			ol{padding-left:40px;}
+			dl{padding-left:40px;}
+		</style>
+	</head>
+	<body>
+		<div class="text">第五节---列表标签</div>
+
+		<h2>无序列表ul li type="disc" 默认值</h2>
+		<ul type="disc">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ul>
+		<br/>
+
+		<h2>无序列表ul li type="circle"</h2>
+		<ul type="circle">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ul>
+		<br />
+		
+		<h2>无序列表ul li type="square"</h2>
+		<ul type="square">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ul>
+		<br />
+
+		<h2>有序列表ol li</h2>
+		<ol>
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ol>
+		<br />
+
+		<h2>不同类型的有序列表ol li  type="默认数字/大写字母A/小写字母a/大写罗马字母I/小写罗马字母i"</h2>
+		<ol type="">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ol>
+		<br />
+		
+		<h2>有序列表 type="A" 这里有一个用法是可以用来模拟考卷的出题</h2>
+		<ol type="A">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ol>
+		<br />
+
+		<h2>有序列表 type="a"</h2>
+		<ol type="a">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ol>
+		<br />
+
+		<h2>有序列表 type="I"</h2>
+		<ol type="I">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ol>
+		<br />
+
+		<h2>有序列表 type="i"</h2>
+		<ol type="i">
+			<li>我是列表项一</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+			<li>我是列表项四</li>
+			<li>我是列表项五</li>
+		</ol>
+		<br />
+
+		<h2>嵌套列表 ol/ul li &lt;li&gt;里面可以无限嵌套</h2>
+		<ol type="A">
+			<li>我是列表项一</li>
+			<li>列表项2
+				<ul>
+					<li>我是列表项2.1</li>
+					<li>我是列表项2.2
+						<ul>
+							<li>列表项2.2.1</li>
+							<li>列表项2.2.2</li>
+							<li>列表项2.2.3</li>
+						</ul>
+					</li>
+					<li>我是列表项2</li>
+					<li>我是列表项3</li>
+				</ul>
+			</li>
+			<li>我是列表项二</li>
+			<li>我是列表项三</li>
+		</ol>
+		<br />
+
+		<h2>自定义标签 dl dt dd</h2>
+		<dl>
+			<dt>列表项一</dt>
+			<dd>列表项1</dd>
+			<dd>列表项2</dd>
+
+			<dt>列表项二</dt>
+			<dd>列表项1</dd>
+			<dd>列表项2</dd>
+			
+			<dt>列表项三</dt>
+			<dd>列表项1</dd>
+			<dd>列表项2</dd>
+
+		</dl>
+
+		<h4>记住一句话：能不让自己后悔，就不要干让自己后悔的事，因为人生没有回头路</h4>
+
+
+	</body>
+
+</html>

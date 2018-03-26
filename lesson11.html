@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<title>javaWeb标签---表单标签</title>
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;margin-let:40px;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+			h2{color:#6600ff;}
+			h3{color:#ff6633;}
+			h4{color:#ff00ff;}
+			.l_space{letter-spacing:20px;}
+			.line_height{line-height:100px;}
+			.text_align{text-align:center;}
+			.text-decoration1{text-decoration:underline;}
+			.text-decoration2{text-decoration:overline;}
+			.text-decoration3{text-decoration:line-through;}
+			.text-decoration4{text-decoration:blink;}
+			.text-decoration5{text-decoration:line-through;}
+			.p_old{text-decoration:line-through;}
+			.p_now{color:red;font-size:18px;}
+			.desc{font-weight:600;text-indent:2em;}
+			.capitalize{text-transform:capitalize;}
+			.uppercase{text-transform:uppercase;}
+			.lowercase{text-transform:lowercase;}
+
+			.tab{width:80%;
+				/*折叠边框*/
+				border-collapse:collapse;
+				margin:100px auto;
+			}
+			.tab tr td{border:1px solid #eaeaea;line-height:40px;text-align:center;}
+			.tab thead .t_title{font-size:18px;height:60px;line-height:60px;}
+			.tab thead .t_head{font-size:14px;font-weight:bold;background:#f5f5f5;}
+			.tab tbody tr:hover{background:#f5f5f5;}
+			.tab tbody tr td:hover{background:#fc0;color:#fff;}
+		</style>
+	</head>
+	<body>
+		<div class="text">第十一节---CSS样式(下)</div>
+		<br />
+
+		<h2>CSS文本</h2>
+		<br />
+		<h3>CSS文本属性定义文本的外观</h3>
+		<br />
+		<h4>color</h4>
+		<br />
+		<h5>&lt;1&gt;文本的颜色(color,背景)：</h5>
+		<hr>
+		<br />
+
+		<h4>letter-spacing</h4>
+		<br />
+		<h5 class="l_space">&lt;2&gt;</h5>
+		<p>
+			字符间距(letter-spacing:20px; letter-spacing:10em;1em=(font-size)px;)：
+		</p>
+		<hr>
+		<br />
+
+		<h4>line-height</h4>
+		<br />
+		<h5 class="l_height">&lt;3&gt;</h5>
+		<p>
+			字体的行间距(行与行之间的距离)(line-height:20px;【企业级常用】 line-height:10%;line-height:2;【倍数间距】)：
+		</p>
+		<p class="line_height">
+			“陕西十大怪”又称“关中十大怪”是指陕西中部的关中地区（西安、咸阳、宝鸡、渭南、铜川等市）出现的十种奇特民俗习惯。值得一提的是，“陕西十大怪”这一提法是不完全合理的。实际上“陕西十大怪”中的风俗仅出现在关中一带，在陕西的大部分地区并非如此。陕西省地理纬度跨度极大，从北至南存在陕北（黄土高原为主）、关中（渭河平原为主）、陕南（以秦岭以南的汉水流域为主）三大自然差异巨大的区域。以关中一地的风俗概括整个陕西，存在以点概面的概念缺陷，亦多表述为“关中十大怪”以去除歧义。
+		</p>
+		<hr>
+		<br />
+
+		<h4>text-align</h4>
+		<br />
+		<h5 class="l_height">&lt;4&gt;</h5>
+		<p>
+			对齐文本(text-align:center/left/right)：
+		</p>
+		<p class="text_align">
+			注意：10px=1em 将原来的px数值除以10，然后换上em作为单位就ok
+		</p>
+		<hr>
+		<br />
+
+		<h4>text-decoration</h4>
+		<br />
+		<h5 class="l_height">&lt;5&gt;</h5>
+		<p>
+			装饰文本
+		</p>
+		<img src="images/decoration.png" alt="装饰文本" width="482" height="180" />
+		
+		<p class="text-decoration2">
+			上划线
+		</p>
+		<p class="text-decoration3">
+			中划线
+		</p>
+		<p class="text-decoration1">
+			下划线
+		</p>
+		<p class="text-decoration4">
+			闪烁线
+		</p>
+		<p>
+			<span class="p_old">原价：￥1688</span>  &nbsp;&nbsp;<span class="p_now">现价：￥688</span>
+		</p>
+		<pre>
+			&lt;del&gt;标签也可以展示line-through样式的效果
+			<del>太好了</del>
+		</pre>
+		<hr>
+		<br />
+
+		<h4>text-indent</h4>
+		<br />
+		<h5 class="l_space">&lt;6&gt;</h5>
+		<p>
+			对文本进行缩进(将段落的第一行进行缩进)
+		</p>
+		<img src="images/indent.png" alt="装饰文本" width="353" height="77" />
+		<br />
+		<p class="desc">
+			“陕西十大怪”又称“关中十大怪”是指陕西中部的关中地区（西安、咸阳、宝鸡、渭南、铜川等市）出现的十种奇特民俗习惯。值得一提的是，“陕西十大怪”这一提法是不完全合理的。实际上“陕西十大怪”中的风俗仅出现在关中一带，在陕西的大部分地区并非如此。陕西省地理纬度跨度极大，从北至南存在陕北（黄土高原为主）、关中（渭河平原为主）、陕南（以秦岭以南的汉水流域为主）三大自然差异巨大的区域。以关中一地的风俗概括整个陕西，存在以点概面的概念缺陷，亦多表述为“关中十大怪”以去除歧义。
+		</p>
+		<hr>
+		<br />
+
+		<h4>text-transform</h4>
+		<br />
+		<h5 class="l_space">&lt;7&gt;</h5>
+		<p>
+			控制文本的大小写
+		</p>
+		<p>
+			<img src="images/transform.png" alt="控制文本" width="458" height="122" />
+		</p>
+		<p class="capitalize">
+			首字母大写：
+			my name is fengxiaolaing ! i have a dream!
+		</p>
+		<p class="uppercase">
+			定义仅有大写字母：
+			my name is fengxiaolaing ! i have a dream!
+		</p>
+		<p class="lowercase">
+			无大写字母：
+			MY Name is fengxiaolaing ! i have a dream!
+		</p>
+		<hr>
+		<br />
+
+		<h4>text-transform</h4>
+		<br />
+		<h5 class="l_space">&lt;8&gt;</h5>
+		<p>
+			<pre>
+				css属性定义
+				&lt;1&gt; 文本的大小（font-size） ;
+
+				&lt;2&gt; 字体系列 （font-family）;
+
+				&lt;3&gt; 字体风格（font-style：normal / italic / oblique）;
+			</pre>
+			<img src="images/weight.png" alt="文本属性" width="708" height="263" />
+		</p>
+		<pre>
+			/*默认加粗 bold === 700*/
+			.bold{font-weight:bold;}
+			
+			/*更粗*/
+			.bolder{font-weight:bolder;}
+
+			/*更细*/
+			.lighter{font-weight:lighter;}
+
+			/*自定义大小*/
+			.auto{font-weight:900;}
+		</pre>
+		<hr>
+		<br />
+
+		<h4>css表格</h4>
+		<br />
+		<h5 class="l_space">&lt;9&gt;</h5>
+		<pre>
+			CSS 表格样式：
+
+			&lt;1&gt; 表格边框（border） ;
+
+			&lt;2&gt; 折叠边框（border-collapse:collapse;）;
+
+			&lt;3&gt; 表格宽度和高度 （width ，height）;
+
+			&lt;4&gt; 表格文本对齐（text-align）;
+
+			&lt;5&gt; 表格内边距 （padding）;
+
+			&lt;6&gt; 表格颜色 ;
+		</pre>
+
+		<table class="tab">
+			<thead>
+				<tr class="t_title">
+					<td colspan="6">Arry老师精英超级特战班级通讯录</td>
+				</tr>
+				<tr class="t_head">
+					<td>编号</td>
+					<td>姓名</td>
+					<td>性别</td>
+					<td>年龄</td>
+					<td>婚否</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>001</td>
+					<td>小‭枫</td>
+					<td>女</td>
+					<td>18</td>
+					<td>已婚</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+				<tr>
+					<td>002</td>
+					<td>邢亚鸽</td>
+					<td>女</td>
+					<td>20</td>
+					<td rowspan="2">未婚</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+				<tr>
+					<td>003</td>
+					<td>丸‭子‬</td>
+					<td>男</td>
+					<td>52</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+				<tr>
+					<td>004</td>
+					<td>佐佑End</td>
+					<td>女</td>
+					<td>40</td>
+					<td>已婚</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+				<tr>
+					<td>005</td>
+					<td>小‭漠</td>
+					<td>男</td>
+					<td>23</td>
+					<td rowspan="2">未婚</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+				<tr>
+					<td>006</td>
+					<td>傅丨‭遆</td>
+					<td>女</td>
+					<td>38</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+
+	</body>
+
+</html>

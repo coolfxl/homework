@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>javaWeb标签---表单标签</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;margin-let:40px;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+			h2{color:#cc66cc;}
+			.css{color:#0000cc;}
+			.choose{color:#ff6600;}
+		</style>
+	</head>
+	<body>
+		<div class="text">第九节---CSS基础语法讲解</div>
+		<br />
+		
+		<h2>&lt;1&gt;css语法</h2>
+		<br />
+		<p class="css">css层叠样式表（Casscading Style Sheet）</p>
+		<br />
+		<p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明</p>
+		<br />
+		<strong class="choose">选择器</strong>
+		<br />
+		<p>通常是您需要改变样式的HTML元素</p>
+		<br />
+		<p>
+			<strong>h1 {width:300px;height:100px;color:red; font-size:14px;}</strong>
+		</p>
+		<p>
+			<img src="images/css.png" alt="注释" width="395" height=
+			"140"/>
+		</p>
+		<br />
+
+		<h2>&lt;2&gt;css 值的不同写法和单位</h2>
+		<pre>
+			二、除了英文单词 red，还可以使用十六进制的颜色值 #ff0000
+			&lt;1&gt; 十六进制颜色值：
+				p { color: #ff0000; }
+			&lt;2&gt; 为了节约字节，我们可以使用 CSS 的缩写形式
+				p { color: #f00 }
+			&lt;3&gt; 英文单词 red:
+				p { color: red; }
+		</pre>
+		<br />
+
+		<h2>&lt;3&gt;css样式 - 空格和大小写</h2>
+		<pre>
+			大多数样式表包含不止一条规则，而大多数规则包含不止一个声明
+			body {
+			  color:  #000;
+			  background: #fff;
+			  margin: 0;
+			  padding: 0;
+			  font-family: 微软雅黑, Palatino, serif;
+			}
+
+		</pre>
+		<br />
+
+		<h2>&lt;4&gt;对选择器进行分组，用逗号将需要分组的选择器分开</h2>
+		<pre>
+			h1,h2,h3,h4,h5,h6 {
+
+				color : green;
+
+			}
+		</pre>
+		<br />
+
+		<h2>&lt;5&gt;CSS注释语法</h2>
+		<pre>
+			CSS注释
+
+			CSS注释的开始使用/* , 结束使用*/
+
+			/* 注释内容 */
+
+
+			/* 文章标题注释 */
+
+			h1{color:red;font-size:12px;}
+		</pre>
+		<br />
+
+		<h2>&lt;6&gt;在 CSS 中，类选择器以一个点号显示</h2>
+		<pre>
+			.center {text-align: center}
+
+			.str{color:red;font-size:12px;}
+
+			h1 和 p 元素都有 center 类。这意味着两者都将遵守 ".center" 选择器中的规则
+
+			&lt;h1 class="center"&gt;文章的标题&lt;/h1&gt;
+
+			&lt;p class="center"&gt;这是段落的标签&lt;/p&gt;
+
+		</pre>
+		<br />
+
+		<h2>&lt;7&gt;id 选择器</h2>
+		<pre>
+			
+			id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式
+
+			id 选择器以 "#" 来定义
+
+			例： 两个 id 选择器
+
+			&lt;p id="red"&gt;这个段落是红色。&lt;/p&gt;
+			&lt;p id="green"&gt;这个段落是绿色。&lt;/p&gt;
+
+			注意： id 属性只能在每个 HTML 文档中出现一次。
+
+
+			id 选择器和派生选择器
+
+			在现代布局中，id 选择器常常用于建立派生选择器
+		
+		</pre>
+		<br />
+
+		<h2>&lt;8&gt;在 CSS 中，类选择器以一个点号显示</h2>
+		<pre>
+			
+			.center {text-align: center}
+
+			.str{color:red;font-size:12px;}
+
+
+			h1 和 p 元素都有 center 类。这意味着两者都将遵守 ".center" 选择器中的规则
+
+			&lt;h1 class="center"&gt;文章的标题&lt;/h1&gt;
+
+			&lt;p class="center"&gt;这是段落的标签&lt;/p&gt;
+		
+		</pre>
+		<br />
+
+		<h2>&lt;9&gt;从外部引入到样式分为两种：（注意写在head标签里面）</h2>
+		<pre>
+			
+			Link样式表式：  &lt;link rel=”stylesheet” type=”text/css” href=”my.css”(href表示路径)&gt;   
+
+
+			Html式：  &lt;style type="text/css"&gt;@import url("css.css");&gt;&lt;/style&gt;  
+		
+		</pre>
+		<br />
+
+		<h2>&lt;10&gt;行内样式</h2>
+		<pre>
+			
+			&lt;!--以style="css样式"--&gt;
+
+			&lt;div style="color:red;font-size:12px;"&gt;&lt;/div&gt;
+
+			&lt;div style="color:red;font-size:12px;"&gt;&lt;/div&gt; 
+		
+		</pre>
+		<br />
+
+		<h2>&lt;11&gt;总结</h2>
+		<pre>
+			&lt;1&gt; css语法；
+
+			&lt;2&gt; css 值的不同写法和单位；
+
+			&lt;3&gt; 空格和大小写;
+
+			&lt;4&gt; 选择器的分组;
+
+			&lt;5&gt; CSS注释语法；
+
+			&lt;6&gt; CSS 类选择器
+
+			&lt;7&gt; id 选择器
+
+			&lt;8&gt;内嵌样式
+
+			&lt;9&gt;外部引入到样式
+
+			&lt;10&gt; 行内样式
+		</pre>
+		<br />
+
+
+
+
+
+
+
+	</body>
+
+</html>

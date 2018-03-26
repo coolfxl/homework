@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>javaWeb标签---表单标签</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;margin-let:40px;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+		</style>
+	</head>
+	<body>
+		<div class="text">第六节---表单标签</div>
+		<br />
+
+		<p>
+			表单简介：表单是一个包含表单元素的区域。表单元素是允许用户在
+			表单中（比如：文本域、下拉列表、单选框、复选框等等）输入信息的元
+			素表单使用表单标签（&lt;form&gt;）定义
+		</p>
+		<br />
+
+		<p>
+		    input 元素 （多数情况下被用到的表单标签是输入标签，输入类型是由类型属性（type）定义的）
+		</p>
+		<br />
+
+		<h2>HTML标签 - 单选按钮</h2>
+		<p>
+			当用户要在表单中键入字母、数字等内容时，就会用到文本域。
+		</p>
+		<br />
+		<form>
+			用户名:<input type="text" name="username" />
+			密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" name="password"/>
+			<br /><br /><br />
+			文本输入域：<textarea cols="20" rows="10"></textarea>
+		</form>
+		<br />
+		
+		<h2>HTML标签 - 单选按钮</h2>
+		<p>
+			当用户从若干给定的的选择中选取其一时，就会用到单选框。注： name="自定义名称" 必须相同 
+		</p>
+		<br />
+		<form>
+			性别:
+			<input type="radio" name="sex" />男
+			<input type="radio" name="sex">女
+			<input type="radio" name="sex">女博士
+		</form>
+		<br />
+		
+		<h2>HTML标签 - 复选框</h2>
+		<p>
+			当用户需要从若干给定的选择中选取一个或若干选项时，就会用到复选框。
+		</p>
+		<br />
+		<form>
+			<input type="checkbox" name="value1"/>篮球
+			<input type="checkbox" name="value2"/>乒乓球
+			<input type="checkbox" name="value3">羽毛球
+			<input type="checkbox" name="value4">橄榄球
+		</form>
+		<br />
+
+		<h2>HTML标签 - Action和确认按钮</h2>
+		<p>
+			当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。
+		</p>
+		<br />
+		<form action="html.do" method="get">
+			用户名：<input type="text" name="username"/>
+			密码：<input type="password" name="password"/>
+				<input type="button" value="确 认">
+		</form>
+		<br />
+
+		<h2>HTML标签 - &lt;select&gt;标签</h2>
+		<p>
+			select 元素可创建单选或多选菜单注：当提交表单时，浏览器会提交选定的项目，或者收集用逗号分隔的多个选项将其合成一个单独的参数列表，并且在将 &lt;select&gt; 表单数据提交给服务器时包括 name 属性
+		</p>
+		<br />
+		<form>
+			出生年月：
+			<select name="birthday" size="4">
+				<option value="0">--请选择--</option>
+				<option value="1">1994</option>
+				<option value="2">1995</option>
+				<option value="3" selected="selected">1996</option>
+				<option value="4">1997</option>
+				<option value="5">1998</option>
+			</select>
+		</form>
+		<br />
+
+		<h2>HTML标签 - 隐藏域隐藏标签</h2>
+		<p>
+			隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器。
+		</p>
+		<form>
+			<input type="hidden" name="hidden" value="隐藏"/>
+		</form>
+		<br />
+
+		<h2>HTML标签 - label标签</h2>
+		<p>
+			&lt;label&gt; 标签为 input 元素定义标注（标记）；label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。如果您在 label 元素内点击文本，就会触发此控件。就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上&lt;label&gt;标签的 for 属性应当与相关元素的 id 属性相同。
+		</p>
+		<form>
+			性别：
+			<input type="radio" name="sex" id="man" /><label for="man">男</label>
+			<input type="radio" name="sex" id="woman" /><label for="woman">女</label>
+			<input type="radio" name="sex" id="nbs" /><label for="nbs">女博士</label>
+			<br /><br />
+		</form>
+		
+		<h2>HTML标签 - 表单应用</h2>
+		<form action="html.do" method="post">
+			用户名：<input type="text" name="username" value="默认值" />
+			<br /><br />
+			密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password"/>
+			<br /><br />
+
+			性别：
+			<input type="radio" name="sex" />男
+			<input type="radio" name="sex" />女
+			<input type="radio" name="sex" />女博士
+			<br /><br />
+
+			兴趣爱好：
+			<input type="checkbox" name="hobby" />篮球
+			<input type="checkbox" name="" />羽毛球
+			<input type="checkbox" name="" />橄榄球
+			<input type="checkbox" name="" />桌球
+			<br /><br />
+			
+			
+			出生年月：
+			<select name="birthday" size="4" disabled>
+				<option value="0">--请选择--</option>
+				<option value="1">1994</option>
+				<option value="2">1995</option>
+				<option value="3" selected="selected">1996</option>
+				<option value="4">1997</option>
+				<option value="5">1998</option>
+			</select>
+			<br />
+				select相关属性:常用到的属性：disabled=“disabled”  name="sel"  size="2"
+			<br />
+			<img src="images/select.png" alt="选择框" width="478" height="105" />
+			<br /><br /> 
+
+			描述：
+			<textarea cols="30" rows="5"></textarea>
+			<br /><br />
+
+			按钮：
+			<input type="submit" value="提交" />
+			<input type="reset" value="重置" />
+			<input type="button" value="确认" />
+
+		</form>
+
+	</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<title>javaWeb标签---表单标签</title>
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;margin-let:40px;}
+			.text{text-align:center;font-size:20px;font-weight:600;}
+			.relative{width:100px;height:100px;border:10px dashed red;}
+			.absolute{width:100px;height:100px;border:10px double gray;}
+			
+			.float{width:300px;height:100px;background:#cc0066;float:left;}
+			.float1{width:300px;height:100px;background:#0033cc;float:left;}
+			.clear1{clear:both;}
+			
+			.float_all{width:600px;height:100px;border:10px solid red;}
+			.float2{width:300px;height:100px;background:#cc0066;float:left;}
+			.float3{width:300px;height:100px;background:#0033cc;float:left;}
+			.clear2{clear:both;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="text">第十三节---定位的基本思想</div>
+		<br />
+		<h1 style="color:#ff3333;">定位的基本思想</h1>
+		<br />
+		<pre style="font-size:18px;">
+CSS(Cascading Style Sheets) 定位 (Positioning) 属性允许你对元素进行定位
+它允许你定义元素框相对于其正常位置应该出现的位置，或者相对于父元素、另一
+个元素甚至浏览器窗口本身的位置。
+
+&lt;1&gt; 块级元素: div、h1或p元素 即：显示为一块内容称之为 “块框“ ;
+
+&lt;2&gt; 行内元素: span,strong,a等元素 即：内容显示在行中称 "行内框";
+
+&lt;3&gt; 使用display属性改变成框的类型 
+
+
+即：display:block; 让行内元素设置为块级元素，display:none; 没有框
+		</pre>
+
+		<h2 style="color:blue;">相对定位 - relative</h2>
+		<br />
+		<pre style="font-size:18px;">
+相对定位：如果对一个元素进行相对定位，它将出现在它所在的位置上。
+
+通过设置垂直或水平位置，让这个元素“相对于”它的起点进行移动
+
+
+.adv_relative {
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+		例如：
+		<div class="relative"></div>
+		</pre>
+
+		<h2 style="color:gray;">绝对定位 - absolute</h2>
+		<br />
+		<pre style="font-size:18px;">
+绝对定位：元素的位置相对于最近的已定位祖先元素，如果元素没有已定位
+
+的祖先元素，它的位置相对于最初的包含块。
+
+
+ .adv_absolute {
+
+  position: absolute;
+
+  left: 30px;
+
+  top: 20px;
+
+}
+		例如：
+		<div class="absolute"></div>
+		</pre>
+
+		<h2 style="color:purple;">浮动</h2>
+		<br />
+		<pre style="font-size:18px;">
+		CSS 浮动：float 属性定义元素在哪个方向浮动，
+		在 CSS 中，任何元素都可以浮动；
+		<img src="images/float.png" alt="float" width="444" height="100" />
+		例如：
+		
+		</pre>
+			<div class="float"></div>
+			<div class="float1"></div>
+			<div class="clear1"></div>
+		<br />
+		
+		<h2 style="color:orange;">清除浮动</h2>
+		
+		<pre style="font-size:18px;">
+		清除浮动之后可以将块级元素恢复成原来样式，默认会换一行下面是另外一个案例
+		如果两个div包含在另一个div里面，并且父级div有border，则，float之后就需要清除，
+		否则就会出现边界无法覆盖的情形
+
+		源码&lt;div style="clear: both;"&gt;&lt;/div&gt;
+
+		如下：
+		</pre>
+		<div class="float_all">
+			<div class="float2"></div>
+			<div class="float3"></div>
+			<div class="clear2"></div>
+		</div>
+		
+
+	</body>
+
+</html>

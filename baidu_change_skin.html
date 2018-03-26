@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>javaWeb开发QQ空间弹窗【腾旭内部技术】</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:url("images/822.jpg");}
+			.title{text-align:center;font-size:18px;font-weight:600px;color:#6600ff;margin-top:30px;}
+			img{border:0;display:block;margin:0 1px 1px 0;}
+			.skin{width:100%;height:200px;background:#fff;padding-top:20px;
+					position:absolute;top:0;left:0;z-index:2;display:none;}	
+			.skin .pic{width:590px;height:180px;margin:0 auto;}
+			.skin .pic .one{width:196px;height:180px;float:left;}
+			.skin .pic .one a{float:left;}
+
+			.skin .pic .two{width:97px;float:left;}
+			.skin .pic .three{width:196px;float:left;margin-left:1px;}
+			.skin .pic .three a{float:left;}
+			
+			.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};}
+
+			.shadow{width:100%;height:100%;background:#000;position:absolute;
+					top:0;left:0;
+					/*兼容所有浏览器的透明度 z-index是蒙版也是透明度的级别*/
+					filter:alpha(opacity=60);-moz-opacity:0.6;
+					-khtml-opacity:0.6;opacity:0.6;
+					z-index:1;display:none;}
+		</style>
+	</head>
+	<body>
+	<div class="title">百度换肤---项目实战三</div>
+	
+	<a href="#" id="choose">切换皮肤</a>
+
+		<div class="skin">
+			<div class="pic">
+				<div class="one">
+					<a href="#">
+						<img src="images/54.jpg" alt="壁纸1" width="195" height="119"/>
+					</a>
+					<a href="#">
+						<img src="images/55.jpg" alt="壁纸2" width="97" height="59"/>
+					</a>
+					<a>
+						<img src="images/60.jpg" alt="壁纸3" width="97" height="59"/>
+					</a>
+				</div>
+				<div class="two">
+					<a href="#">
+						<img src="images/115.jpg" alt="壁纸4" width="97" height="59"/>
+					</a>
+					<a href="#">
+						<img src="images/300.jpg" alt="壁纸5" width="97" height="59"/>
+					</a>
+					<a>
+						<img src="images/539.jpg" alt="壁纸6" width="97" height="59"/>
+					</a>
+				</div>
+				<div class="three">
+					<a href="#">
+							<img src="images/823.jpg" alt="壁纸8" width="97" height="59"/>
+					</a>
+					<a>
+						<img src="images/824.jpg" alt="壁纸9" width="97" height="59"/>
+					</a>
+					<a href="#">
+						<img src="images/825.jpg" alt="壁纸7" width="195" height="119"/>
+					</a>
+				</div>
+				<div class="four">
+					<a href="#">
+						<img src="images/826.jpg" alt="壁纸10" width="97" height="59"/>
+					</a>
+					<a href="#">
+						<img src="images/827.jpg" alt="壁纸11" width="97" height="59"/>
+					</a>
+					<a>
+						<img src="images/828.jpg" alt="壁纸12" width="97" height="59"/>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	<div class="shadow"></div>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#choose").click(function(){
+				//让图片淡入淡出
+				$(".skin,.shadow").toggle("slow");
+			});
+			
+			$(".shadow").click(function(){
+				$(".skin,.shadow").toggle("slow");
+			});
+			
+			//切换皮肤
+			
+			//$(".skin").find("a").click(function(){
+				//非百度做法
+				//var src = $(this).find("img").attr("src").replace(/-\d*/ig,'');
+				//$("body").css("background","url("+src+")");
+			//});
+			
+
+			//百度做法,需要记忆功能
+			$(".skin").find("a").click(function(){
+				var src = $(this).find("img").attr("src").replace(/-\d*/ig,'');
+				$("body").css("background","url("+src+")");
+				//浏览器自带的session会话,将图片存储到浏览器的sessionStorage里面
+				sessionStorage.setItem("src",src);
+			});
+			//获取浏览器sessionStorage的值
+			var sessionSrc = sessionStorage.getItem("src");
+			if(sessionSrc){
+				//如果sessionSrc不为空
+				$("body").css("background","url("+sessionSrc+")");
+			}
+
+		});
+	</script>
+	</body>
+</html>

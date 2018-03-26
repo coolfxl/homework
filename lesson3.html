@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- 声明当前页面的编码集，charset=GBK/GB2312 中文编码，国际编码utf-8-->
+		<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+		<!-- 当前页面的三要素 -->
+		<!-- title对应搜索引擎上的标题 -->
+		<title>HTML标签--特殊符号标签</title>
+		<!-- 关键字可以让搜索引擎快速搜索到相关内容 -->
+		<meta name="keywords" content="javaWeb,QQ空间,弹窗">
+		<!-- 对应百度上的描述<=76个字-->
+		<meta name="description" content="">
+
+		<!-- css,js-->
+		<!-- css 层叠样式表，一件美丽的外衣 -->
+		<!-- css 叫做内嵌样式 -->
+		<!-- block升级为块级元素 -->
+		<!-- 增加对选中图片的阴影效果.skin .pic a:hover img{opacity:0.8;filter:alpha{opacity=80};} -->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:#6633ff;font-size:14px;font-family:"微软雅黑";}
+			.title{text-align:center;font-size:20px;font-weight:600;}
+			.maodian{text-align:center;margin-top:40px;}
+			.maodian a{color:#000;}
+			.maodian p{padding-bottom:20px;font-size:18px;color:#ff9999;}
+			.assign{text-align:center;}
+			.font{text-align:center;}
+			.span{text-align:center;}
+			hr{margin-left:160px;}
+			.strong_b{text-align:center;}
+			.a{text-align:center;}
+			.marquee{text-align:center;}
+			.marquee .m_marquee{width:300px;height:100px;border:1px solid red;margin:0 auto;}
+			.review{text-align:center;}
+		</style>
+	</head>
+	<body>
+		<div class="title"><h1>第三节</h1></div>
+		<div class="maodian">
+			<p>a标签的锚点应用</p>
+			<a href="#assign">特殊符号</a> |
+			<a href="font">font标签</a> |
+			<a href="#span">span标签</a> |
+			<a href="#strong_b">strong/b标签</a> |
+			<a href="#a">a标签</a> |
+			<a href="#marquee">滚动标签</a> |
+		</div>
+		<div class="assign">
+			<h1>html标签---特殊符号<a name="assign"></a></h1>
+			空格：&nbsp;<br />
+			大于号：&gt;&nbsp;&nbsp;<br />
+			比如：更多&gt;&gt;<br />
+			小于号：&lt;<br />
+			例子：书名号&lt;&lt;追风筝的人&gt;&gt;<br />
+			引号：&quot;太棒了&quot;<br />
+			版权号：Copyright &copy; 2016年小梁.com版权所有
+			<h4>总结：若有需要，请百度“html特殊符号”</h4>
+		</div>
+		<br />
+		<!--hr标签的长度用width控制-->
+		<hr width="900"/>
+		<br />
+
+		<div class="font">
+			<h1>html标签---font标签<a name="font"></a></h1>
+			<font size="18" color="red" face="宋体">重头开始学html标签^_^</font>
+			<h4>总结：在html5中font标签已经被淘汰了，但是学了仍然有用&nbsp;&nbsp;&lt;font size=&quot;字体大小&quot;&nbsp;color=&quot;字体颜色&quot;&nbsp;face=&quot;字体类型&quot;&gt;要设置的文字&lt;/font&gt;</h4>
+		</div>
+		<br />
+		<hr width="900"/>
+		<br />
+		
+		<div class="span">
+			<h1>html标签---span标签<a name="span"></a></h1>
+			<h4>总结：span标签被用来组合文档中的行内元素。&nbsp;&nbsp;<span style="color:red">注：span没有固定的格式表现，当对它应用样式时，它才会产生视觉上的变化</span></h4>
+		</div>
+		<br />
+		<hr width="900"/>
+		<br />
+
+		<div class="strong_b">
+			<h1>html标签---strong/b标签<a name="strong_b"></a></h1>
+			<h4>总结：strong标签用于强调文本。但是他强调的更重要一些，表示重要文本。利于SEO优化。b标签呈现粗体文本效果</h4>
+		</div>
+		<br />
+		<hr width="900"/>
+		<br />
+
+		<div class="a">
+			<h1>html标签---a标签<a name="a"></a></h1>
+			<a href="http://www.baidu.com" target="_blank">点我弹出新窗口</a><br />
+			<a href="http://www.baidu.com" target="">点我在当前页面中弹出新窗口</a>
+			<h4>总结：a标签是行内元素&nbsp;&nbsp;1、页面链接语法：链接到其他页面，a标签规定在何处打开链接文档，target=_blank,浏览器总在一个新打开、未命名的窗口中载入目标文档</h4>
+		</div>
+		<br />
+		<hr width="900"/>
+		<br />
+
+		<div class="marquee">
+			<h1>html标签---滚动标签<a name="marquee"></a></h1>
+				<div class="m_marquee">
+					<marquee direction="right" onmouseover="this.stop()" onmouseout="this.start()">这真是极好的</marquee>
+				</div>
+			<h4>总结：更多属性详见参考文档</h4>
+		</div>
+		<br />
+		<hr width="900"/>
+		<br />
+
+		<div class="review">
+			<h1>html标签---标签复习</h1>
+			&lt;a name=&quot;锚记点名称&quot;&gt;&lt;/a&gt;<br />
+			&lt;a name=&quot;#锚记点名称&quot;&gt;&lt;/a&gt;<br />
+			<p>备注：同一个页面锚记点名称不唯一，不要重复</p>
+			<p>首先创建一个锚点连接的锚记点：href="#锚记点名称"&nbsp;主题名称</p>
+			<p>然后在具体要连接到的地方设置 name:name="锚记点名称"(锚记点前面要加上#号)</p>
+			<h4>总结：a标签的锚点应用</h4>
+		</div>
+		<br />
+		<hr width="900"/>
+		<br />
+
+
+	</body>
+</html>
